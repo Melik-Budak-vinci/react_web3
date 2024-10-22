@@ -2,11 +2,15 @@
 import { useState } from 'react'
 
 function ClickCounter({title,message,hoveredMessage}){
-    const [count, setCount] = useState(0);
-    const [isHovered,setHovered] = useState(0)
+
+    localStorage.getItem("count")==null ? localStorage.setItem("count",0):'';
+    const [count, setCount] = useState(JSON.parse(localStorage.getItem("count")));
+    const [isHovered,setHovered] = useState(false)
 
     const setCounter = () => {
-      setCount((count) => count + 1)
+        const newCount = count + 1
+        setCount((count) => count + 1)
+        localStorage.setItem("count",newCount)
     }
     const setHovereder = () => {
         setHovered((isHovered) =>!isHovered)
