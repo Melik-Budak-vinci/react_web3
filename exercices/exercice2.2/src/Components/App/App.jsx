@@ -1,6 +1,6 @@
 
 import './App.css'
-import ChangeColor from './ChangeColor'
+import ChangeColor from 'components/ChangeColor/ChangeColor'
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <ChangeColor/>
 
 
-    </div>
+    </div>  
   )
 }
 
