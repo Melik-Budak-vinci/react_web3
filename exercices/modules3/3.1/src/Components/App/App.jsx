@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import {useState } from 'react'
 import Statistics from 'components/Statistics/Statistics'
 import Loading from 'components/Loader/Loading'
 
